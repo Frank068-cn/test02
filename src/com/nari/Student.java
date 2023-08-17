@@ -4,14 +4,13 @@ public class Student {
     private String name;
     private int age;
     private String school;
+    private String teacher;
 
-    public Student(String name, int age, String school) {
+    public Student(String name, int age, String school, String teacher) {
         this.name = name;
         this.age = age;
         this.school = school;
-    }
-
-    public Student() {
+        this.teacher = teacher;
     }
 
     @Override
@@ -20,7 +19,19 @@ public class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", school='" + school + '\'' +
+                ", teacher='" + teacher + '\'' +
                 '}';
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public Student() {
     }
 
     public String getSchool() {
